@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Peta Desa</title>
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav>
+    <a href="index.html">Beranda</a>
+    <a href="map-desa.html" class="active">Map Desa</a>
+    <a href="map-kecamatan.html">Map Kecamatan</a>
+    <a href="tentang.html">Tentang</a>
+</nav>
+
+<section class="content">
+    <h2>Peta Wilayah Desa</h2>
+    <p>Menampilkan batas wilayah, jalan, bangunan, dan fasilitas umum.</p>
+
+    <!-- WADAH PETA -->
+    <div id="map"></div>
+</section>
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="js/map-desa.js"></script>
+
+</body>
+</html>
