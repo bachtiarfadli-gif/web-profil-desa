@@ -1,33 +1,36 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <title>Peta Desa</title>
+  <meta charset="UTF-8">
+  <title>Peta Kelurahan</title>
 
-    <!-- Leaflet CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
-    <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <nav>
-    <a href="index.html">Beranda</a>
-    <a href="map-desa.html" class="active">Map Desa</a>
-    <a href="map-kecamatan.html">Map Kecamatan</a>
-    <a href="tentang.html">Tentang</a>
+  <a href="index.html">Beranda</a>
+  <a href="map-desa.html" class="active">Map Desa</a>
+  <a href="map-kecamatan.html">Map Kecamatan</a>
+  <a href="tentang.html">Tentang</a>
 </nav>
 
-<section class="content">
-    <h2>Peta Wilayah Desa</h2>
-    <p>Menampilkan batas wilayah, jalan, bangunan, dan fasilitas umum.</p>
+<div id="map"></div>
 
-    <!-- WADAH PETA -->
-    <div id="map"></div>
-</section>
-
-<!-- Leaflet JS -->
+<!-- Leaflet -->
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-<script src="js/map-desa.js"></script>
+
+<!-- CORE MAP (WAJIB) -->
+<script src="js/map-core.js"></script>
+
+<!-- CONFIG KHUSUS KELURAHAN -->
+<script src="js/config-kelurahan.js"></script>
+
+<!-- INISIALISASI MAP -->
+<script>
+  initMap('map', kelurahanConfig);
+</script>
 
 </body>
 </html>
