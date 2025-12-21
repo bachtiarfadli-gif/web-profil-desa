@@ -2,25 +2,83 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Peta Kecamatan</title>
 
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Leaflet CSS -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+
+  <!-- Global CSS -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<nav>
-  <a href="index.html">Beranda</a>
-  <a href="map-desa.html">Map Desa</a>
-  <a href="map-kecamatan.html" class="active">Map Kecamatan</a>
-  <a href="tentang.html">Tentang</a>
-</nav>
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+  <nav class="navbar">
+    <div class="nav-brand fade-left">
+      <strong>Web GIS Desa</strong>
+    </div>
+    <div class="nav-menu fade-right">
+      <a href="index.html">Beranda</a>
+      <a href="map-desa.html">Map Desa</a>
+      <a href="map-kecamatan.html" class="active">Map Kecamatan</a>
+      <a href="tentang.html">Tentang</a>
+    </div>
+  </nav>
+</header>
 
-<section class="content">
-  <h2>Peta Wilayah Kecamatan</h2>
-  <div id="map"></div>
-</section>
+<!-- ================= MAIN ================= -->
+<main class="content">
 
+  <!-- PROFIL KECAMATAN -->
+  <section id="profil-kecamatan" class="reveal">
+    <h2>Profil Kecamatan</h2>
+    <p>
+      Kecamatan <strong>Purwokerto Timurong> merupakan wilayah
+      administratif yang terdiri dari beberapa desa atau kelurahan
+      di Kabupaten <strong>Banyumas</strong>.
+    </p>
+  </section>
+
+  <!-- DATA UMUM KECAMATAN -->
+  <section id="data-kecamatan" class="reveal">
+    <h2>Data Umum Kecamatan</h2>
+
+    <table class="data-table scale-in">
+      <tr>
+        <th>Jumlah Desa/Kelurahan</th>
+        <td>6 Wilayah</td>
+      </tr>
+      <tr>
+        <th>Luas Wilayah</th>
+        <td>± 8,42 km²</td>
+      </tr>
+      <tr>
+        <th>Jumlah Penduduk</th>
+        <td>58,451 jiwa</td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- PETA KECAMATAN -->
+  <section class="reveal">
+    <h2>Peta Wilayah Kecamatan</h2>
+    <div id="map"></div>
+  </section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer fade-up">
+  <p>© 2025 Web GIS Desa</p>
+</footer>
+
+<!-- ================= SCRIPT ================= -->
 <!-- Leaflet -->
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
@@ -34,6 +92,9 @@
 <script>
   initMap('map', kecamatanConfig);
 </script>
+
+<!-- SCROLL REVEAL -->
+<script src="js/scroll.js"></script>
 
 </body>
 </html>
